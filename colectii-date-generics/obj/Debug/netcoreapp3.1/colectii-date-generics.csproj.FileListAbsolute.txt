@@ -1,0 +1,13 @@
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\bin\Debug\netcoreapp3.1\colectii-date-generics.exe
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\bin\Debug\netcoreapp3.1\colectii-date-generics.deps.json
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\bin\Debug\netcoreapp3.1\colectii-date-generics.runtimeconfig.json
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\bin\Debug\netcoreapp3.1\colectii-date-generics.runtimeconfig.dev.json
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\bin\Debug\netcoreapp3.1\colectii-date-generics.dll
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\bin\Debug\netcoreapp3.1\colectii-date-generics.pdb
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.csprojAssemblyReference.cache
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.AssemblyInfoInputs.cache
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.AssemblyInfo.cs
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.csproj.CoreCompileInputs.cache
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.dll
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.pdb
+D:\1_PROGRAMARE\C#\Abstractizare\colectii-date-generics\colectii-date-generics\obj\Debug\netcoreapp3.1\colectii-date-generics.genruntimeconfig.cache
