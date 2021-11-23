@@ -20,15 +20,17 @@ namespace tests_for_colectii_date_generics
         public void test1()
         {
             List lista = new List();
-            lista.add(new Masina("bmw,1"));
-            lista.add(new Masina("vw,2"));
-            lista.add(new Masina("vw,3"));
-            lista.add(new Masina("audi,4"));
+            lista.add(new Masina("ggggggg,0"));
+            lista.add(new Masina("ffffff,1"));
+            lista.add(new Masina("ccc,2"));
+            lista.add(new Masina("a,3"));
+            lista.add(new Masina("dddd,4"));
+            lista.add(new Masina("bb,5"));
+            lista.add(new Masina("eeeee,6"));
             outputHelper.WriteLine(lista.afisare()+"\n\n");
 
-            lista.remove(1);
-            outputHelper.WriteLine(lista.afisare());
-
+            lista.sortKm();
+            outputHelper.WriteLine(lista.afisare() + "\n\n");
         }
     }
 }

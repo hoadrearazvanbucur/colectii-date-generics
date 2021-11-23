@@ -8,7 +8,7 @@ namespace colectii_date_generics
     public  class List : IList
     {
         private Node head = null;
-        //addSfarsit
+
         public void add(Masina masina)
         {
             if(head == null)
@@ -35,60 +35,82 @@ namespace colectii_date_generics
         {
             Node save = head;
             int k = 0;
-            if ((index - 1) < size() && (index - 1) > 0)
+            if (index < size() && index > 0)
             {
-                while (k < index-2)
+                while (k < index-1)
                 {
                     save = save.Next;
                     k++;
                 }
                 save.Next = save.Next.Next;
             }
-            else if((index-1)==size())
+            else if(index==size())
             {
                 save = null;
             }
-            else if((index - 1) == 0)
+            else if(index == 0)
             {
-                while (save.Next!=null)
-                {
-                    save = save.Next;
-                }
-                save = null;
+                head = save.Next;
             }
         }
-
         public void remove(Masina masina)
         {
-            throw new NotImplementedException();
+            Node save = head;
+            int k = 0;
+            while(save!=null)
+            {
+                if (save.Data.ToString() == masina.ToString())
+                    break;
+                k++;
+                save = save.Next;
+            }
+            remove(k);
         }
-
-
-
-
-
-
-        public void contains(Masina masina)
+        public bool contains(Masina masina)
         {
-            throw new NotImplementedException();
+            Node save = head;
+            while(save!=null)
+            {
+                if (save.Data.ToString() == masina.ToString())
+                    return true;
+                save = save.Next;
+            }
+            return false;
         }
-
-        public void get(int index)
+        public Node get(int index)
         {
-            throw new NotImplementedException();
-        }
+            Node save = head;
+            int k = 0;
+            while (save != null)
+            {
+                if (k == index)
+                    return save;
+                save = save.Next;
+                k++;
 
+            }
+            return null;
+        }
         public int indexOf(Masina masina)
         {
-            return 0;
+            Node save = head;
+            int k = 0;
+            while (save != null)
+            {
+                if (save.Data.ToString() == masina.ToString())
+                    return k;
+                k++;
+                save = save.Next;
+            }
+            return -1;
         }
-
-        public void isEmpty()
+        public bool isEmpty()
         {
-            throw new NotImplementedException();
+            Node save = head;
+            if (save != null)
+                return false;
+            return true;
         }
-
-
         public int size()
         {
             int k = 0;
@@ -100,12 +122,67 @@ namespace colectii_date_generics
             }
             return k;
         }
-
-        public int CompareTo([AllowNull] List other)
+        public void set(Masina masina,int index)
         {
-            throw new NotImplementedException();
+            Node save = head;
+            int k = 0;
+            if (index != 0)
+            {
+                while (k < index - 1)
+                {
+                    save = save.Next;
+                    k++;
+                }
+                Node m = new Node();
+                m.Data = masina;
+                m.Next = save.Next;
+                save.Next = m;
+            }
+            else
+            {
+                Node m = new Node();
+                m.Data = masina;
+                m.Next = save;
+                head = m;
+            }
+        }
+        public void sortMarca()
+        {
+            int k;
+            do{
+                k = 0;
+                for(int i=0;i<this.size()-1;i++)
+                    if (this.get(i).Data.CompareTo(this.get(i+1).Data) == -1){
+                        Masina aux = this.get(i).Data;
+                        this.get(i).Data=this.get(i+1).Data;
+                        this.get(i+1).Data=aux;
+                        k=1;
+                    }
+            } while (k == 1);
+        }
+        public void sortKm()
+        {
+            KmComparer comparer = new KmComparer();
+            int k;
+            do
+            {
+                k = 0;
+                for (int i = 0; i < this.size() - 1; i++)
+                    if (comparer.Compare(this.get(i).Data,this.get(i+1).Data)==-1)
+                    {
+                        Masina aux = this.get(i).Data;
+                        this.get(i).Data = this.get(i + 1).Data;
+                        this.get(i + 1).Data = aux;
+                        k = 1;
+                    }
+            } while (k == 1);
         }
 
+        public Node Head
+        {
+            get => this.head;
+            set => this.head = value;
+        }
         public string afisare()
         {
             Node save = head;
@@ -117,7 +194,5 @@ namespace colectii_date_generics
             }
             return text;
         }
-
-
     }
 }
