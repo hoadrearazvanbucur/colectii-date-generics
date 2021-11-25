@@ -26,7 +26,7 @@ namespace colectii_date_generics
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare()+"\n\n");
 
-
+            Console.WriteLine("Suma: "+list.suma());
         }
 
         /*
@@ -49,7 +49,7 @@ namespace colectii_date_generics
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare() + "\n\n");
 
-
+            Console.WriteLine("Produs : " + list.produsImp());
         }
 
         /*
@@ -72,7 +72,7 @@ namespace colectii_date_generics
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare() + "\n\n");
 
-
+            Console.WriteLine("Media aritmetica:" + list.ma());
         }
 
         /*
@@ -95,7 +95,7 @@ namespace colectii_date_generics
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare() + "\n\n");
 
-
+            Console.WriteLine("Cmmdc: " + list.cmmdcList());
         }
 
         /*
@@ -116,9 +116,12 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
+            Console.WriteLine(list.afisare() + "\n\n"+"Cifra Control:\n");
 
-
+            int[] x = list.cControl();
+            int k = 0;
+            while(x[k]!=0)
+                Console.WriteLine(x[k++].ToString());
         }
 
         /*
@@ -139,9 +142,12 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
+            Console.WriteLine(list.afisare() + "\n\nNumere prime:\n");
 
-
+            int[] x = list.nrPrime();
+            int k = 0;
+            while (x[k] != 0)
+                Console.WriteLine(x[k++].ToString());
         }
 
         /*
@@ -162,9 +168,12 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
+            Console.WriteLine(list.afisare() + "\n\nNumere prime intre ele cu pozitia:\n");
 
-
+            int[] x = list.primeEle();
+            int k = 0;
+            while (x[k] != 0)
+                Console.WriteLine(x[k++].ToString());
         }
 
         /*
@@ -185,9 +194,10 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
+            Console.WriteLine(list.afisare() + "\n\nElementele sortate crescator:\n");
 
-
+            list.sort();
+            Console.WriteLine(list.afisare());
         }
 
         /*
@@ -208,9 +218,9 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\nFara numere impare:\n");
+            list.stergeImp();
+            Console.WriteLine(list.afisare());
         }
 
         /*
@@ -231,15 +241,18 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
+            Console.WriteLine(list.afisare() + "\n\nMultiplu ultimului element sunt:\n");
 
-
+            int[] x = list.multipliU();
+            int k = 0;
+            while (x[k] != 0)
+                Console.WriteLine(x[k++].ToString());
         }
 
         /*
         
         11.Input:  O lista citita de la tastatura cu n elemente.
-          Output:  Sa se afiseze elementele vectorului in urmatoarea ordine: primul, ultimul, al doilea, penultimul, etc.
+          Output:  Sa se afiseze elementele listei in urmatoarea ordine: primul, ultimul, al doilea, penultimul, etc.
 
         */
         public void problema11()
@@ -254,9 +267,8 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\nElementele listei dupa regula:\n");
+            list.regulaSchimbare();
         }
 
         /*
@@ -278,8 +290,8 @@ namespace colectii_date_generics
             }
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine("Maxim: " + list.maxim());
+            Console.WriteLine("Minim: " + list.minim());
         }
 
         /*
@@ -301,8 +313,7 @@ namespace colectii_date_generics
             }
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare() + "\n\n");
-
-
+            list.indiceMaxMin();
         }
 
         /*
@@ -324,7 +335,7 @@ namespace colectii_date_generics
             }
             Console.WriteLine("\nElementele listei:");
             Console.WriteLine(list.afisare() + "\n\n");
-
+            list.intervalMaxMin();
 
         }
 
@@ -346,9 +357,7 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\n" + list.nrEleUlt()+" elemente egale cu ultimul element");
         }
 
         /*
@@ -370,15 +379,15 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
+            Console.WriteLine(list.afisare() + "\n\nPrimele doua cifre patrt perfect");
+            list.douaPatrat();
 
         }
 
         /*
         
         17.Input:  O lista citita de la tastatura cu n elemente.
-          Output:  Sa se determine perechea de elemente dintr-un vector egal deprtate de centru cu suma elementelor maxima.
+          Output:  Sa se determine perechea de elemente dintr-o lista egal deprtate de centru cu suma elementelor maxima.
 
         */
         public void problema17()
@@ -393,9 +402,8 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\nPerechea maxima egal departata de mijloc");
+            list.egalDep();
         }
 
         /*
@@ -416,9 +424,8 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\nPozitia primului element in lista sortata");
+            Console.WriteLine(list.pozSort());
         }
 
         /*
@@ -439,9 +446,8 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\nNumerele care apar o singura data sunt:");
+            list.singuraData();
         }
 
         /*
@@ -463,9 +469,9 @@ namespace colectii_date_generics
                 list.add(int.Parse(Console.ReadLine()));
             }
             Console.WriteLine("\nElementele listei:");
-            Console.WriteLine(list.afisare() + "\n\n");
-
-
+            Console.WriteLine(list.afisare() + "\n\nNoua lista dupa inlocuirea elementelor nule");
+            list.inlocNul();
+            Console.WriteLine(list.afisare());
         }
 
     }

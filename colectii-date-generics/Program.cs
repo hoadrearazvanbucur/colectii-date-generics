@@ -7,7 +7,7 @@ namespace colectii_date_generics
         static void Main(string[] args)
         {
             TemaSolutii solutii = new TemaSolutii();
-            solutii.problema1();ad
+            solutii.problema20();
         }
     }
 }
