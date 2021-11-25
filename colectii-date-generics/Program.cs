@@ -6,7 +6,8 @@ namespace colectii_date_generics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TemaSolutii solutii = new TemaSolutii();
+            solutii.problema1();ad
         }
     }
 }
