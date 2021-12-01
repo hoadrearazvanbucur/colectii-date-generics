@@ -17,20 +17,38 @@ namespace tests_for_colectii_date_generics
 
         [Fact]
 
-        public void test1()
+        public void testAfisare()
         {
-            List lista = new List();
-            lista.add(new Masina("ggggggg,0"));
-            lista.add(new Masina("ffffff,1"));
-            lista.add(new Masina("ccc,2"));
-            lista.add(new Masina("a,3"));
-            lista.add(new Masina("dddd,4"));
-            lista.add(new Masina("bb,5"));
-            lista.add(new Masina("eeeee,6"));
-            outputHelper.WriteLine(lista.afisare()+"\n\n");
+            ControlMasina control = new ControlMasina();
+            control.afisare();
+        }
 
-            lista.sortKm();
-            outputHelper.WriteLine(lista.afisare() + "\n\n");
+        [Fact]
+
+        public void testAdaugareStergere()
+        {
+            ControlMasina control = new ControlMasina();
+            control.adaugare(new Masina("test1,1"));
+            Assert.True(control.Lista.contains(new Masina("test1,1")));
+            control.stergere(control.Lista.indexOf(new Masina("test1, 1")));
+            Assert.False(control.Lista.contains(new Masina("test1,1")));
+
+        }
+
+        [Fact]
+
+        public void testModificare()
+        {
+            ControlMasina control = new ControlMasina();
+            Masina m = new Masina("test1,1");
+            control.adaugare(m);
+            control.modificareMarca(m,"testMarca");
+            Assert.True(control.Lista.get(control.Lista.indexOf(m)).Data.Marca.Equals("testMarca")==true);
+
+            control.modificareKm(m, 123);
+            Assert.True(control.Lista.get(control.Lista.indexOf(m)).Data.Km.Equals(123) == true);
+            control.stergere(control.Lista.indexOf(m));
+
         }
     }
 }
